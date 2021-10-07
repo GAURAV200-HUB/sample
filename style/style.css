@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700&family=Acme&family=Amatic+SC&family=Anton&family=Dancing+Script&family=Indie+Flower&family=Josefin+Slab&family=Kaushan+Script&family=Livvic&family=Lobster+Two&family=Playfair+Display:ital@0;1&family=Shadows+Into+Light&display;&family=New+Tegomin&display;family=Crimson+Text&family=Girassol&family=Itim&display=swap');
+
+/* Font Family */
+/* font-family: 'Abhaya Libre', serif;
+font-family: 'Acme', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Josefin Slab', serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Livvic', sans-serif;
+font-family: 'Lobster Two', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'New Tegomin', serif;
+font-family: 'Crimson Text', serif;
+font-family: 'Shadows Into Light', cursive; */
+
+:root{
+    /*---------- Fonts ----------*/
+    --site_heading: 'Playfair Display', serif;
+    --site_para: 'Josefin Slab', serif;
+    --content_head: 'Kaushan Script', cursive;
+    --nav_bar: 'Crimson Text', serif;
+    --blog_title: 'Anton', sans-serif;;
+    --blog_subtitle: 'Itim', cursive;
+    --site_footer_rights: 'Josefin Slab', serif;
+    /*-----x----- Fonts -----x-----*/
+
+    /*---------- Colors ----------*/
+    --c_content_head: #4d4d4d;
+    --c_nav_text: #3f4954;
+    --c_nav_hover: #7B5EC1;
+    --c_blog_background: #F5F5F5;
+    --c_blog_title: #4BAC3F;
+    --c_blog_subtitle: #DF3062;
+    --c_blog_tag: #ffffff;
+    --c_blog_rm: #ff003b;
+    --c_blog_date_post: #747d8c;
+    --c_footer_background: #ecf0f1;
+    --c_footer_head: #0f0f0f;
+
+    --c_blog_1: #90ccf4;
+    --c_blog_2: #f78888;
+    --c_blog_3: #f3d250;
+    --c_blog_4: #5da2d5;
+
+    
+    --cp_c: #ececec;
+    /*-----x----- Colors -----x-----*/
+}
+
+/*---------- Universal Tag ----------*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----x----- Universal Tag -----x-----*/
+
+/*---------- Pre Defind Styles ----------*/
+h1{
+    font-family: var(--site_heading);
+}
+
+h2{
+    font-family: var(--content_head);
+    color: var(--c_content_head);
+    font-weight: normal;
+}
+
+p{
+    font-family: var(--site_para);
+}
+
+nav{
+    font-family: var(--nav_bar);
+}
+
+hr.divider{
+    margin: 0;
+    border: 0; 
+    height: 1px;
+    width: 100%;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.media_head h2{
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+/*-----x----- Pre Defind Styles -----x-----*/
+
+/*---------- Site Indentity ----------*/
+header .site_identity{
+    margin: 5px;
+    text-align: center;
+}
+/*-----x----- Site Indentity -----x-----*/
+
+/*---------- Site Navigation ----------*/
+nav{
+    width: 100%;
+}
+
+.site_nav{
+    display: flex;
+}
+
+.site_nav .nav_menu a,
+.site_nav .social_menu a
+{
+    display: inline-block;
+    color: var(--c_nav_text);
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.site_nav .nav_menu a:hover,
+.site_nav .social_menu a:hover
+{
+    color: var(--c_nav_hover);
+}
+/*-----x----- Site Navigation -----x-----*/
+
+/*---------- Media Slider ----------*/
+main
+{
+    width: 100%;
+    text-align: center;
+}
+
+main .media_slider
+{
+    width: 80%;
+}
+
+main .media_slider .media_content .owl-carousel img
+{
+    width: 100% auto;
+    height: 60% auto;
+}
+/*-----x----- Media Slider -----x-----*/
+
+/*---------- Card Section ----------*/
+main .post{
+    width: 80%;
+}
+
+main .post .b_container{
+    display: flex;
+    grid-template-columns: 40% 40%;
+}
+
+.b_container>div{
+    flex-grow: 1;
+    flex-basis: 0;
+    /* padding: 1.5rem; */
+    text-align: center;
+}
+/*-----x----- Card Section -----x-----*/
+main .post{
+    width: 80%;
+}
+
+main .post img{
+    margin: 0;
+}
+
+.blog-image{
+    position: relative;
+}
+
+.blog-image img{
+    width: 100%;
+}
+
+.tag{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--c_blog_tag);
+}
+
+.blog-content{
+    height: 100%;
+    padding: 15px 15px;
+}
+
+.blog-title {
+    font-family: var(--blog_title);
+    color: var(--c_blog_title);
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.blog-subtitle{
+    font-family: var(--blog_subtitle);
+    color: var(--c_blog_subtitle);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.blog-desc a{
+    text-decoration: none;
+    color: var(--c_blog_rm);
+    font-weight: bolder;
+}
+
+.card-footer{
+    width: 100%;
+}
+
+.blog-footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blog-date,.blog-post{
+    font-size: 13px;
+    color: var(--c_blog_date_post);
+}
+
+/* Footer */
+footer{
+    height: 100%;
+    background: var(--c_blog_background);
+    position: relative;
+}
+
+footer .f_container{
+    display: flex;
+    grid-template-columns: 33% 33% 33%;
+}
+
+footer .f_container>div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer .f_container h1,i{
+    color: var(--c_footer_head);
+}
+
+footer .f_container .insta_post div>img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: 0.3rem 0.4rem;
+}
+
+footer .f_container .follow_us a{
+    color: var(--c_nav_text);
+    padding: 1rem;
+}
+
+footer .f_container .follow_us a:hover{
+    color: var(--c_nav_hover);
+}
+
+footer .site_rights{
+	text-align: center;
+	font-family: var(--site_footer_rights);
+}
+
+footer .site_rights h4 a{
+    font-weight: bolder;
+	color: var(--c_footer_head);
+}
+
+footer .site_rights h4 a:hover{
+    color: var(--c_nav_hover);
+}
+
+footer .go_top{
+    position: absolute;
+    right: 2%;
+    top: 70%;
+    color: var(--c_nav_text);
+    transition: ease-out 0.5s;
+}
+
+footer .go_top:hover{
+    color: var(--c_nav_hover);
+    transform: scale(1.2);
+}
+
+
+/*---------- Media width which is less than 990px ----------*/
+@media only screen and (max-width: 991px){
+	.site_nav{
+        display: grid;
+        text-align: center
+    }
+
+    main .media_slider{
+        width: 100%;
+    }
+
+    main .post{
+        width: 100%;
+    }
+
+    footer .f_container .insta_post{
+        display: none;
+    }
+
+    footer .f_container .follow_us a{
+        display: inline-block;
+    }
+}
+/*-----x----- Media width which is less than 990px -----x-----*/
